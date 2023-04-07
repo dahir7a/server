@@ -48,11 +48,10 @@ app.post('/addtologin', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 
 con.connect(function(err) {
   if (err) throw err;
@@ -99,11 +98,10 @@ app.post('/checkcredentials', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -147,11 +145,10 @@ app.post('/card', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -198,11 +195,10 @@ app.post('/card2', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -250,11 +246,10 @@ app.post('/deleteCard', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -306,11 +301,10 @@ app.post('/displayprof', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -390,11 +384,10 @@ app.post('/addfavourites', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 // var sql1="SELECT * FROM details where username";
 // con.query(sql1, function (err, result) {
@@ -488,11 +481,10 @@ app.post('/adddetails', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -545,11 +537,10 @@ app.post('/sendall', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -598,11 +589,10 @@ app.post('/verifytrans', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -700,11 +690,10 @@ app.post('/checkbill', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -761,11 +750,10 @@ app.post('/elitecheck', (req, res) => {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
@@ -813,11 +801,10 @@ console.log(allcontacts);
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "matromonial"
-});
+ host: "bi2kzlafaoxinul0b5ez-mysql.services.clever-cloud.com",
+    user: "u9tiivzn8qogpc4p",
+    password: "nceGO07NJsO2XvMCJhDv",
+    database: "bi2kzlafaoxinul0b5ez"});
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
