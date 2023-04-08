@@ -791,9 +791,12 @@ app.get('/savecontacts', (req, res) => {
 
 app.post('/savecontacts', (req, res) => {
   
+const allcontacts='';
   const uf=req.body.save.ux
   const dta=req.body.save.dtx
-const allcontacts=dta.join(', ')
+  for (let i = 0; i < dta.length; i++) {
+  allcontacts=allcontacts+"\n "+dta[i];
+}
 console.log(allcontacts);
   console.log("ALL CPO"+ allcontacts);
 
