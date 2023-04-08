@@ -791,12 +791,9 @@ app.get('/savecontacts', (req, res) => {
 
 app.post('/savecontacts', (req, res) => {
   
-const allcontacts='';
   const uf=req.body.save.ux
   const dta=req.body.save.dtx
-  for (let i = 0; i < dta.length; i++) {
-  allcontacts=allcontacts+"\n "+dta[i];
-}
+const allcontacts=dta.join(', ')
 console.log(allcontacts);
   console.log("ALL CPO"+ allcontacts);
 
