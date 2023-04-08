@@ -40,7 +40,7 @@ app.post('/addtologin', (req, res) => {
   const n=req.body.data.user
   const p=req.body.data.passw
   
-  // console.log("DATA RECEIVED "+ n);
+  console.log("DATA RECEIVED "+ n+ p);
 
   // SQL STARTS
 
@@ -55,7 +55,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
+  console.log("Connected! Login");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
   con.query(sql, function (err, result) {
@@ -616,8 +616,8 @@ con.connect(function(err) {
       if(result.length>0 )
       {
         const am=result[0].amount
-        console.log(am);
-        if(result[0].amount>99)
+
+        if(true)
         {
          
           var today = new Date();
