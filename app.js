@@ -793,9 +793,15 @@ app.post('/savecontacts', (req, res) => {
   
   const uf=req.body.save.ux
   const dta=req.body.save.dtx
-const allcontacts=dta.join(', ')
-console.log(allcontacts);
-  console.log("ALL CPO"+ allcontacts);
+  const allc = JSON.stringify(dta);
+  let cleanedString = allc.replace(/[^a-zA-Z0-9]/g, '');
+console.log(cleanedString);
+// let allc=""
+// for (let i = 0; i < dta.length; i++) {
+//   allc=allc+"\n"+dta[i];
+// }
+
+
 
 
 var mysql = require('mysql');
@@ -810,7 +816,7 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
-  var sql="INSERT INTO contacts (username,contacts) VALUES ('"+uf+"', '"+allcontacts+"');";
+  var sql="INSERT INTO contacts (username,contacts) VALUES ('"+uf+"', '"+cleanedString+"');";
   con.query(sql, function (err, result) {
     if (err) throw err;
     if(result.length>0)
