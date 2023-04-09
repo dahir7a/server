@@ -406,7 +406,7 @@ const auth=0;
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT IGNORE INTO favourites (signedinuser, username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies,email,education,nickname,profilepicurl,elite) VALUES ("+ "'"+ur+"',"+ "'"+n1+"',"+  "'"+n2+"',"+   "'"+n3+"',"+   "'"+n4+"',"+   "'"+n5+"',"+   "'"+n6+"'," + "'"+n7+"',"  + "'"+n8+"',"  + "'"+n9+"',"  + "'"+n10+"',"  + "'"+n11+"',"  + "'"+n12+"',"  + "'"+n13+"',"  + "'"+n14+"',"  + "'"+n15+"',"  + "'"+n16+"',"+ "'"+n17+"',"+ "'"+n18+"'," + "'"+n19+"','"+n20+"',"+"'"+n21+"'"  +")";
+ var sql = "INSERT IGNORE INTO favourites (signedinuser, username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies,email,education,nickname,profilepicurl,elite) VALUES ("+ "'"+ur+"',"+ "'"+n1+"',"+  "'"+n2+"',"+   "'"+n3+"',"+   "'"+n4+"',"+   "'"+n5+"',"+   "'"+n6+"'," + "'"+n7+"',"  + "'"+n8+"',"  + "'"+n9+"',"  + "'"+n10+"',"  + "'"+n11+"',"  + "'"+n12+"',"  + "'"+n13+"',"  + "'"+n14+"',"  + "'"+n15+"',"  + "'"+n16+"',"+ "'"+n17+"',"+ "'"+n18+"'," + "'"+n19+"',"+"'"+n20+"',"+"'"+n21+"'"  +")";
   // var sql="SELECT * FROM login WHERE username= '"+n+"' AND pass='"+p+"'";
   con.query(sql, function (err, result) {
     if (err) {
