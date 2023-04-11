@@ -53,20 +53,21 @@ var con = mysql.createConnection({
     password: "nceGO07NJsO2XvMCJhDv",
     database: "bi2kzlafaoxinul0b5ez"});
 
+
 con.connect(function(err) {
-  if (err) { Console.log("error in login: "+err);
-                con.end();
-           }
-  console.log("Connected! Login");
+  if (err) throw err;
+  console.log("Connected! Login ");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("NO ERROR IN LOGIN");
-      con.end();
+    // console.log(result[1].name);
+    
+  res.send("USER ADDED");
   });
-
+  con.end()
 });
+
 
 
 // SQL ENDS
