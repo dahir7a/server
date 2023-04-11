@@ -60,9 +60,10 @@ con.connect(function(err) {
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    // console.log(result[1].name);
+    console.log("NO ERROR IN LOGIN");
+      con.end();
   });
-  con.end()
+
 });
 
 
