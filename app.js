@@ -54,7 +54,9 @@ var con = mysql.createConnection({
     database: "bi2kzlafaoxinul0b5ez"});
 
 con.connect(function(err) {
-  if (err) throw err;
+  if (err) { Console.log("error in login: "+err);
+                con.end();
+           }
   console.log("Connected! Login");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
