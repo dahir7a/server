@@ -71,8 +71,7 @@ con.connect(function(err) {
 
 // SQL ENDS
 
-  
-  res.send("USER ADDED ");
+
 
 
 });
