@@ -60,10 +60,9 @@ con.connect(function(err) {
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
   con.query(sql, function (err, result) {
-    if (err) throw err;
-    // console.log(result[1].name);
+    console.log("ERROR FROM LOGIN : "+err);
     
-  res.send("USER ADDED");
+  res.send("USER ADDED SUCESSFULLY");
   });
   con.end()
 });
@@ -73,7 +72,7 @@ con.connect(function(err) {
 // SQL ENDS
 
   
-  res.send("USER ADDED");
+  res.send("USER ADDED ");
 
 
 });
