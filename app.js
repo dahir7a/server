@@ -156,7 +156,7 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
-  var sql="SELECT name,username,height,age,education,work,profilepicurl FROM details WHERE username!='"+u+"';";
+  var sql="SELECT name,username,height,age,education,work,maritalstat,profilepicurl FROM details WHERE username!='"+u+"';";
   con.query(sql, function (err, result) {
     if (err) throw err;
     if(result.length>0)
@@ -206,7 +206,7 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
-  var sql="SELECT DISTINCT name,signedinuser,username,height,age,education,work,profilepicurl FROM favourites WHERE signedinuser='"+u+"';";
+  var sql="SELECT DISTINCT name,signedinuser,username,maritalstat,height,age,education,work,profilepicurl FROM favourites WHERE signedinuser='"+u+"';";
   con.query(sql, function (err, result) {
     if (err) throw err;
     if(result.length>0)
