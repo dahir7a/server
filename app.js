@@ -156,7 +156,7 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
-  var sql="SELECT name,username,height,age,education,work,maritalstat,profilepicurl FROM details WHERE username!='"+u+"';";
+  var sql="SELECT name,username,height,age,education,work,maritalstat,profilepicurl,gender,prefferedage FROM details WHERE username!='"+u+"';";
   con.query(sql, function (err, result) {
     if (err) throw err;
     if(result.length>0)
