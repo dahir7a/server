@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express();
-const bodyParser = require('body-parser')
 const cors=require('cors')
-app.use(bodyParser.json())
+
 app.use(cors())
 
-
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: "50mb"}));
+app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 app.get('/android', (req, res) => {
 
   res.send('This is the data endpoint');
@@ -60,9 +61,8 @@ con.connect(function(err) {
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO login (username,pass) VALUES ('"+n+"' ,'"+p+"'"+")";
   con.query(sql, function (err, result) {
-    console.log("ERROR FROM LOGIN : "+err);
-    
-  res.send("USER ADDED SUCESSFULLY");
+    if (err) throw err;
+  res.send("1");
   });
   con.end()
 });
@@ -468,7 +468,10 @@ app.post('/adddetails', (req, res) => {
   const n18=req.body.data2.education
   const n19=req.body.data2.nickname
   const n20=req.body.data2.profilepicurl
-  
+
+  // const n1='TAHIRRRRxxsadasd',n2='TAHIRRRR',n3='TAHIRRRR',n4='TAHIRRRR',n5='TAHIRRRR'
+  // ,n6='TAHIRRRR',n7='TAHIRRRR',n8='TAHIRRRR',n9='TAHIRRRR',n10='TAHIRRRR',n11='TAHIRRRR'
+  // ,n12='TAHIRRRR',n13='TAHIRRRR',n14='TAHIRRRR',n15='TAHIRRRR',n16='TAHIRRRR',n17='TAHIRRRR',n18='TAHIRRRR',n19='TAHIRRRR',n20='TAHIRRRR';
   
 
   
@@ -499,7 +502,7 @@ con.connect(function(err) {
 res.send(err)
     }
     else{
-      res.send("Data Details Added")
+      res.send("1")
     }
     
     // console.log(result[1].name);
@@ -797,7 +800,7 @@ app.post('/savecontacts', (req, res) => {
   const dta=req.body.save.dtx
   const allc = JSON.stringify(dta);
   let cleanedString = allc.replace(/[^a-zA-Z0-9]/g, '');
-console.log(cleanedString);
+// console.log(cleanedString);
 // let allc=""
 // for (let i = 0; i < dta.length; i++) {
 //   allc=allc+"\n"+dta[i];
@@ -816,24 +819,23 @@ var con = mysql.createConnection({
 const auth=0;
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
+  console.log("Connected! CONTACTS");
   // var sql = "INSERT INTO details (username, name,age, gender, interests, phoneno, country, maritalstat, work, prefferedage, city, religion, caste, height, description, hobbies) VALUES ('pathan77', ' "+a+" ', '', '', '', '', '', '', '', '', '', '', '', '', '','')";
   var sql="INSERT INTO contacts (username,contacts) VALUES ('"+uf+"', '"+cleanedString+"');";
   con.query(sql, function (err, result) {
-    if (err) throw err;
-    if(result.length>0)
-    {
-      // console.log('server cards data:'+result);
-      res.json(result);
-      con.end()
-      
+    if (err) {
+      console.log("Contacts Routee: "+err);
+    res.send('0')
+    con.end()
     }
     else
     {
-      res.send('0');
+      // console.log('server cards data:'+result);
+      res.send('1');
       con.end()
-   
+      
     }
+    
     // console.log(result[1].name);
   });
  
