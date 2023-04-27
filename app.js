@@ -775,7 +775,7 @@ con.connect(function(err) {
     else
     {
       
-      res.send('1');
+      res.send('0');
       con.end()
    
     }
